@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -20,6 +23,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const ContactForm: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -29,7 +33,35 @@ const ContactForm: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+    setLoading(true);
+    const templateParams = {
+      name: data.name,
+      carModel: data.carModel,
+      service: data.service,
+      email: data.email,
+      phone: data.phone,
+    };
+
+    emailjs
+      .send(
+        "service_11ntbxf",
+        "template_4kl9k1i",
+        templateParams,
+        "EsF3RFgIXAYlWt30r"
+      )
+      .then(
+        (response) => {
+          setLoading(false);
+          toast.success(
+            "Email sent successfully! We will contact you as soon as possible!"
+          );
+        },
+        (err) => {
+          setLoading(false);
+          toast.error("Failed to send email. Please try again later!");
+          console.log("FAILED TO SEND EMAIL...", err);
+        }
+      );
   };
 
   return (
@@ -61,7 +93,9 @@ const ContactForm: React.FC = () => {
                     className={`input ${errors.name ? "border-red-500" : ""}`}
                   />
                   {errors.name && (
-                    <p className="text-red-500 text-sm pl-5 pt-1">{errors.name.message}</p>
+                    <p className="text-red-500 text-sm pl-5 pt-1">
+                      {errors.name.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -74,7 +108,9 @@ const ContactForm: React.FC = () => {
                     }`}
                   />
                   {errors.carModel && (
-                    <p className="text-red-500 text-sm pl-5 pt-1">{errors.carModel?.message}</p>
+                    <p className="text-red-500 text-sm pl-5 pt-1">
+                      {errors.carModel?.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -87,7 +123,9 @@ const ContactForm: React.FC = () => {
                     }`}
                   />
                   {errors.service && (
-                    <p className="text-red-500 text-sm pl-5 pt-1">{errors.service?.message}</p>
+                    <p className="text-red-500 text-sm pl-5 pt-1">
+                      {errors.service?.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -98,7 +136,9 @@ const ContactForm: React.FC = () => {
                     className={`input ${errors.email ? "border-red-500" : ""}`}
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm pl-5 pt-1">{errors.email?.message}</p>
+                    <p className="text-red-500 text-sm pl-5 pt-1">
+                      {errors.email?.message}
+                    </p>
                   )}
                 </div>
                 <div>
@@ -109,14 +149,17 @@ const ContactForm: React.FC = () => {
                     className={`input ${errors.phone ? "border-red-500" : ""}`}
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-sm pl-5 pt-1">{errors.phone?.message}</p>
+                    <p className="text-red-500 text-sm pl-5 pt-1">
+                      {errors.phone?.message}
+                    </p>
                   )}
                 </div>
                 <button
                   type="submit"
-                  className="btn mt-2 max-w-[200px] !px-5 !py-1.5"
+                  className="btn mt-2 max-w-[200px] !px-5 !py-1.5 disabled:bg-gray-500"
+                  disabled={loading}
                 >
-                  Confirm
+                  {loading ? "Sending..." : "Confirm"}
                 </button>
               </form>
             </div>
@@ -198,6 +241,17 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
