@@ -1,6 +1,7 @@
 import HomeBigSection from "./components/HomeBigSection";
 import ContactForm from "./components/ContactForm";
 import CustomSlider from "./components/CustomSlider";
+import HomeBigSectionMobile from "./components/HomeBigSectionMobile";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         </div>
       </div>
       <HomeBigSection />
+      <HomeBigSectionMobile />
       <CustomSlider />
       <ContactForm />
     </div>
