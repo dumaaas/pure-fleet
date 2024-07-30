@@ -1,4 +1,8 @@
+"use client";
+
 import { ReactElement } from "react";
+import { useModal } from "../context/ContactModalContext";
+import Link from "next/link";
 
 type Props = {
   title: string;
@@ -17,6 +21,8 @@ const ServicesCard = ({
   cover,
   id,
 }: Props) => {
+  const { openModal } = useModal();
+
   return (
     <div id={id} className="">
       <div className="w-full bg-gray-1">
@@ -33,8 +39,7 @@ const ServicesCard = ({
         <div
           className="min-h-[365px]"
           style={{
-            backgroundImage:
-              "url('/services-1.png'), linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 150%)",
+            backgroundImage: `url('/${cover}'), linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 150%)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundBlendMode: "color",
@@ -43,7 +48,7 @@ const ServicesCard = ({
           <div className="container mx-auto px-4 py-9 text-center text-secondary text-xl">
             {description}
             <div className="mt-9">
-              <a href="#contact" className="btn">
+              <a onClick={() => openModal()} className="btn cursor-pointer">
                 Book now
               </a>
             </div>
@@ -53,41 +58,28 @@ const ServicesCard = ({
           <div className="container mx-auto px-4 pt-5 pb-9">
             <div className="max-w-fit mx-auto">
               <div className="flex items-center gap-5 justify-center">
-                <div className="overflow-hidden">
-                  <div
-                    className="w-[340px] h-[300px] hover:scale-110 transition-all duration-300 ease-in-out"
-                    style={{
-                      backgroundImage: "url('/services-1.png')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  ></div>
-                </div>
-                <div className="overflow-hidden">
-                  <div
-                    className="w-[340px] h-[300px] hover:scale-110 transition-all duration-300 ease-in-out"
-                    style={{
-                      backgroundImage: "url('/services-1.png')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  ></div>
-                </div>
-                <div className="overflow-hidden">
-                  <div
-                    className="w-[340px] h-[300px] hover:scale-110 transition-all duration-300 ease-in-out"
-                    style={{
-                      backgroundImage: "url('/services-1.png')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  ></div>
-                </div>
+                {gallery.map((item, index) => {
+                  return (
+                    <div key={index} className="overflow-hidden">
+                      <div
+                        className="w-[340px] h-[300px] hover:scale-110 transition-all duration-300 ease-in-out"
+                        style={{
+                          backgroundImage: `url('/${item}')`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      ></div>
+                    </div>
+                  );
+                })}
               </div>
               <div className="flex items-center justify-end gap-4 pt-2 cursor-pointer group">
-                <p className="group-hover:no-underline underline uppercase font-bold text-[20px] text-secondary underline-offset-4">
+                <Link
+                  href="/gallery"
+                  className="group-hover:no-underline underline uppercase font-bold text-[20px] text-secondary underline-offset-4"
+                >
                   Gallery
-                </p>
+                </Link>
               </div>
             </div>
           </div>

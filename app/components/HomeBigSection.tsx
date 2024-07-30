@@ -16,7 +16,9 @@ const HomeBigSection = () => {
             <div className="w-1/2 flex flex-col gap-[20px]">
               <div className="flex flex-col text-[37px] uppercase">
                 <div className="-skew-x-[20deg] font-[900] pl-2 px-4 w-fit bg-secondary">
-                  <p className="skew-x-[20deg] italic leading-[40px]">Premium</p>
+                  <p className="skew-x-[20deg] italic leading-[40px]">
+                    Premium
+                  </p>
                 </div>
                 <p className=" text-secondary">Pick up & drop off service</p>
               </div>
@@ -48,8 +50,9 @@ const HomeBigSection = () => {
           <div className="flex flex-col gap-[100px] items-center justify-center">
             <p className="text-secondary text-[30px] uppercase">Our services</p>
             <div className="flex items-center flex-wrap justify-between gap-x-[50px] gap-y-[100px]">
-              <div
-                className="cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+              <a
+                href="/services#paint"
+                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/paint-protect.png')",
                   backgroundSize: "cover",
@@ -59,7 +62,7 @@ const HomeBigSection = () => {
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
                 <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px]">
+                  <p className="font-bold uppercase text-[24px] group-hover:text-accent">
                     Paint protection film
                   </p>
                   <p className="font-normal text-[16px] w-[68%]">
@@ -67,9 +70,10 @@ const HomeBigSection = () => {
                     painted surfaces
                   </p>
                 </div>
-              </div>
-              <div
-                className="cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+              </a>
+              <a
+                href="/services#window"
+                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/window-tinting.png')",
                   backgroundSize: "cover",
@@ -79,7 +83,7 @@ const HomeBigSection = () => {
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
                 <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px]">
+                  <p className="font-bold uppercase text-[24px] group-hover:text-accent">
                     Window tinting
                   </p>
                   <p className="font-normal text-[16px] w-[68%]">
@@ -87,9 +91,10 @@ const HomeBigSection = () => {
                     your vehicle
                   </p>
                 </div>
-              </div>
-              <div
-                className="cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+              </a>
+              <a
+                href="/services#wrapping"
+                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/detailing.png')",
                   backgroundSize: "cover",
@@ -99,13 +104,15 @@ const HomeBigSection = () => {
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
                 <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px]">Wrapping</p>
+                  <p className="font-bold uppercase text-[24px] group-hover:text-accent ">
+                    Wrapping
+                  </p>
                   <p className="font-normal text-[16px] w-[68%]">
                     customize your vehilce's appearance and protect the original
                     paint
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

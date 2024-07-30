@@ -193,9 +193,15 @@ const ContactForm: React.FC = () => {
                       className="w-[18px] h-[23px]"
                       alt="location"
                     />
-                    <p className="text-secondary text-[20px]">
-                      phone: <span className="text-accent">(773) 209 3754</span>
-                    </p>
+                    <a
+                      href="tel:+17732093754"
+                      className="group text-secondary text-[20px]"
+                    >
+                      phone:{" "}
+                      <span className="group-hover:underline underline-offset-4 text-accent">
+                        (773) 209 3754
+                      </span>
+                    </a>
                   </div>
                   <div className="flex gap-2">
                     <Image
@@ -205,12 +211,15 @@ const ContactForm: React.FC = () => {
                       className="w-[18px] h-[23px]"
                       alt="location"
                     />
-                    <p className="text-secondary text-[20px]">
+                    <a
+                      href="mailto:info@purefleet.me"
+                      className="group text-secondary text-[20px]"
+                    >
                       e-mail:{" "}
-                      <span className="text-accent">
-                        markodumnic8@gmail.com
+                      <span className="text-accent group-hover:underline underline-offset-4">
+                        info@purefleet.me
                       </span>
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>

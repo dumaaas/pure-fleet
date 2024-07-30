@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:order-2 order-1 flex gap-3 items-center">
             <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-secondary text-secondary rounded-full border-2">
               <Image
-                src="/icons/instagram.svg"
+                src="/icons/instagram-white.svg"
                 width={15}
                 height={15}
                 alt="instagram"
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex fill-accent items-center justify-center w-7 h-7 border-secondary text-secondary rounded-full border-2">
               <Image
-                src="/icons/facebook.svg"
+                src="/icons/facebook-white.svg"
                 width={9}
                 height={9}
                 alt="facebook"
@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
             <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-secondary text-secondary rounded-full border-2">
               <Image
-                src="/icons/youtube.svg"
+                src="/icons/youtube-white.svg"
                 width={15}
                 height={15}
                 alt="youtube"

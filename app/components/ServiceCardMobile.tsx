@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ReactElement } from "react";
+import { useModal } from "../context/ContactModalContext";
 
 type Props = {
   title: string;
@@ -18,6 +21,8 @@ const ServiceCardMobile = ({
   cover,
   id,
 }: Props) => {
+  const { openModal } = useModal();
+
   return (
     <div id={id} className="">
       <div className="w-full bg-gray-1">
@@ -63,13 +68,13 @@ const ServiceCardMobile = ({
             </div>
             <div className="flex items-center justify-between w-full gap-2 cursor-pointer group pt-[30px] pb-[60px]">
               <div className="">
-                <a href="#contact" className="btn">
+                <a onClick={() => openModal()} className="btn cursor-pointer">
                   Book now
                 </a>
               </div>
               <div className="group hover:bg-secondary hover:text-primary transition-all ease-in-out duration-200 text-secondary border-2 border-secondary rounded-[50px] pr-4 pl-6 py-2 bg-transparent flex items-center justify-between gap-6">
                 <Link
-                  href="gallery"
+                  href="/gallery"
                   className=" uppercase font-bold text-[20px]  underline-offset-4"
                 >
                   Gallery

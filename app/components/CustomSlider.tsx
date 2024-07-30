@@ -72,7 +72,7 @@ export default function CustomSlider() {
               <div
                 key={index}
                 onClick={() => openModal(index)}
-                className={`cursor-pointer w-1/3 transition-transform duration-300 ease-in-out ${
+                className={`overflow-hidden group cursor-pointer w-1/3 transition-transform duration-300 ease-in-out ${
                   index === 1
                     ? "transform scale-110 z-10"
                     : "transform scale-90"
@@ -81,7 +81,7 @@ export default function CustomSlider() {
                 <img
                   src={src}
                   alt={`Image ${currentSlide + index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="transition-all group-hover:scale-125 ease-in-out duration-300 transition-all w-full h-full object-cover"
                 />
               </div>
             ))}

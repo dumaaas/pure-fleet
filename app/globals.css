@@ -93,5 +93,5 @@ html {
 }
 
 .btn {
-  @apply lg:py-[12px] py-[10px] rounded-full lg:px-11 px-[41px] lg:text-[22px] text-[20px] tracking-widest font-bold uppercase text-primary bg-secondary hover:bg-accent transition-all ease-in-out duration-200;
+  @apply cursor-pointer lg:py-[12px] py-[10px] rounded-full lg:px-11 px-[41px] lg:text-[22px] text-[20px] tracking-widest font-bold uppercase text-primary bg-secondary hover:bg-accent transition-all ease-in-out duration-200;
 }

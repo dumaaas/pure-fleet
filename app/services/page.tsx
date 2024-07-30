@@ -3,6 +3,37 @@ import ServicesCard from "../components/ServicesCard";
 import ContactForm from "../components/ContactForm";
 import ServiceCardMobile from "../components/ServiceCardMobile";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services | Pure Fleet",
+  description:
+    "Discover a range of professional mobile car cleaning services offered by Pure Fleet. From basic washes to full detailing, we have you covered.",
+  keywords: "mobile car cleaning services, Pure Fleet, car wash, car detailing",
+  authors: [{ name: "Pure Fleet" }],
+  openGraph: {
+    title: "Pure Fleet | Our Services",
+    description:
+      "Discover a range of professional mobile car cleaning services offered by Pure Fleet. From basic washes to full detailing, we have you covered.",
+    images: [
+      {
+        url: "https://purefleet.me/gallery3.png",
+        width: 800,
+        height: 600,
+        alt: "Pure Fleet Gallery Image",
+      },
+    ],
+    url: "https://purefleet.me/services",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pure Fleet | Our Services",
+    description:
+      "Discover a range of professional mobile car cleaning services offered by Pure Fleet. From basic washes to full detailing, we have you covered.",
+    images: ["https://purefleet.me/gallery3.png"],
+  },
+};
+
 export default function Services() {
   return (
     <div>
@@ -87,8 +118,12 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={[]}
-          cover=""
+          gallery={[
+            "service-gallery-paint-1.png",
+            "service-gallery-paint-2.png",
+            "service-gallery-paint-3.png",
+          ]}
+          cover="service-cover-paint.png"
         />
         <ServicesCard
           id="window"
@@ -115,8 +150,12 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={[]}
-          cover=""
+          gallery={[
+            "service-gallery-window-3.png",
+            "service-gallery-window-2.png",
+            "service-gallery-window-1.png",
+          ]}
+          cover="service-cover-window.png"
         />
         <ServicesCard
           id="wrapping"
@@ -136,8 +175,12 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={[]}
-          cover=""
+          gallery={[
+            "service-gallery-wrapping-1.png",
+            "service-gallery-wrapping-2.png",
+            "service-gallery-wrapping-3.png",
+          ]}
+          cover="service-cover-wrapping.png"
         />
         <ServicesCard
           id="detailing"
@@ -158,8 +201,12 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={[]}
-          cover=""
+          gallery={[
+            "service-cover-detailing-1.png",
+            "service-cover-detailing-2.png",
+            "service-cover-detailing-3.png",
+          ]}
+          cover="service-cover-detailing.png"
         />
         <div id="contact">
           <ContactForm />
@@ -289,7 +336,10 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={["wrapping-mobile-gallery1.png", "wrapping-mobile-gallery2.png"]}
+          gallery={[
+            "wrapping-mobile-gallery1.png",
+            "wrapping-mobile-gallery2.png",
+          ]}
           cover="wrapping-mobile.png"
         />
         <ServiceCardMobile
@@ -311,7 +361,10 @@ export default function Services() {
               </p>
             </div>
           }
-          gallery={["detailing-mobile-gallery1.png", "detailing-mobile-gallery2.png"]}
+          gallery={[
+            "detailing-mobile-gallery1.png",
+            "detailing-mobile-gallery2.png",
+          ]}
           cover="detailing-mobile.png"
         />
         <ContactForm />

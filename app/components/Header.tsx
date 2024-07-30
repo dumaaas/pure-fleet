@@ -62,7 +62,7 @@ const Header = () => {
               />
             </div>
           </div>
-          <div
+          <Link href="/"
             className={`mx-auto transition-all duration-300 ease-out ${
               isScrolled
                 ? "w-[85px] h-[47px]"
@@ -75,11 +75,11 @@ const Header = () => {
               height={isScrolled ? 47 : 94}
               alt="logo"
             />
-          </div>
-          <div className="lg:flex hidden items-center gap-4">
+          </Link>
+          <a href="tel:+17732093754" className="group lg:flex hidden items-center gap-4">
             <Image src="/icons/phone.svg" width={19} height={18} alt="phone" />
-            <p className="text-primary text-lg">(773) 209 3754</p>
-          </div>
+            <p className="group-hover:underline underline-offset-4 text-primary text-lg">(773) 209 3754</p>
+          </a>
         </div>
       </div>
       <div
