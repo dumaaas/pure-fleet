@@ -6,7 +6,6 @@ import CustomSlider from "./CustomSlider";
 import HomeBigSection from "./HomeBigSection";
 import HomeBigSectionMobile from "./HomeBigSectionMobile";
 
-
 export function HomePage() {
   const { openModal } = useModal();
 
@@ -34,6 +33,35 @@ export function HomePage() {
               <a onClick={() => openModal()} className="btn">
                 Book now
               </a>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-full lg:block hidden bg-accent">
+          <div className="container mx-auto px-4">
+            <div className="py-[60px] flex items-center justify-center flex-col gap-8 text-center">
+              <div className="flex flex-col gap-1">
+                <p className="text-primary font-extrabold uppercase text-[36px]">
+                  Premium
+                </p>
+                <p className="font-extrabold text-[24px] uppercase">
+                  Pick up & drop off service
+                </p>
+              </div>
+              <h3 className="bg-primary text-secondary rounded-[12px] px-5 py-2 uppercase text-[24px] tracking-widest">
+                We come to you!
+              </h3>
+              <div className="flex flex-col gap-4">
+                <p className="text-[18px] w-[60%] text-center mx-auto">
+                  Experiance the ultimate convenience with our Premium Service.
+                  We offer a Pick up & Drop off service using an enclosed
+                  trailer, ensuring your vehicle travels zero miles and remains
+                  in pristine condition throughout transport.
+                </p>
+                <p className="text-[18px] ">
+                  Enjoy a spotless, showroom-quality car without lifting a
+                  finger.
+                </p>
+              </div>
             </div>
           </div>
         </div>

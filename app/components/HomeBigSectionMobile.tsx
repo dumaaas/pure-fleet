@@ -51,7 +51,7 @@ const HomeBigSectionMobile = () => {
                 </p>
                 <p className="font-normal text-[16px] w-[68%]">
                   powerful protection keeping the condition of your vehicle's
-                  painted surfaces
+                  painted surfaces pristine
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const HomeBigSectionMobile = () => {
                   Window tinting
                 </p>
                 <p className="font-normal text-[16px] w-[68%]">
-                  enhance privacy, UV protection and a sleek, custom look of
+                  enhance privacy, UV protection and the sleek, custom look of
                   your vehicle
                 </p>
               </div>
@@ -159,7 +159,7 @@ const HomeBigSectionMobile = () => {
               Pure fleet is a specialized car service company comprising a team
               of passionate professionals dedicated to cars and their meticulous
               care. We provide comprehensive services tailored to your car's
-              needs, utlizing the highest quality products to unsure optimal
+              needs, utlizing the highest quality products to ensure optimal
               results.
             </p>
 

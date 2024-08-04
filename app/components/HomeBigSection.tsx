@@ -12,47 +12,13 @@ const HomeBigSection = () => {
       <div className="relative w-full pt-[64px] pb-[138px]">
         <div className="absolute h-full w-full inset-0 bg-black opacity-50"></div>
         <div className="container relative z-20 mx-auto px-[16px] flex flex-col gap-[130px]">
-          <div className="flex flex-row items-start gap-[30px]">
-            <div className="w-1/2 flex flex-col gap-[20px]">
-              <div className="flex flex-col text-[37px] uppercase">
-                <div className="-skew-x-[20deg] font-[900] pl-2 px-4 w-fit bg-secondary">
-                  <p className="skew-x-[20deg] italic leading-[40px]">
-                    Premium
-                  </p>
-                </div>
-                <p className=" text-secondary">Pick up & drop off service</p>
-              </div>
-              <div className="flex flex-col gap-[10px] w-[85%] text-[20px] text-secondary">
-                <p>
-                  Experience the ultimate convenience with our Premium Service.
-                  We understand that your time is valuable, so we come to you!
-                </p>
-                <p>
-                  Our professional team will pick up your car from your
-                  location, perform a meticulous service, and return it to you
-                  looking pristine.
-                </p>
-                <p>
-                  We prioritize your satisfaction and strive to exceed your
-                  expectations with every detail. Enjoy a spotless,
-                  showroom-quality car without lifting a finger.
-                </p>
-              </div>
-            </div>
-            <div className="group w-1/2 h-[408px] mt-4 rounded-[12px] bg-primary relative hover:opacity-80 ease-in-out duration-300 transition-all">
-              <img
-                src="/prikolica.png"
-                alt="prikolica"
-                className="absolute -left-12 bottom-16 group-hover:skew-y-6 transform transition-all ease-in-out duration-300"
-              />
-            </div>
-          </div>
+ 
           <div className="flex flex-col gap-[100px] items-center justify-center">
             <p className="text-secondary text-[30px] uppercase">Our services</p>
-            <div className="flex items-center flex-wrap justify-between gap-x-[50px] gap-y-[100px]">
+            <div className="flex items-center justify-between gap-x-[30px] gap-y-[100px]">
               <a
                 href="/services#paint"
-                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+                className="group cursor-pointer relative h-[372px] w-[293px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/paint-protect.png')",
                   backgroundSize: "cover",
@@ -61,19 +27,19 @@ const HomeBigSection = () => {
               >
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
-                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px] group-hover:text-accent">
+                <div className="min-w-fit transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-69px] left-1/2 transform -translate-x-1/2">
+                  <p className="font-bold min-w-fit uppercase text-[20px] group-hover:text-accent">
                     Paint protection film
                   </p>
-                  <p className="font-normal text-[16px] w-[68%]">
+                  <p className="font-normal text-[14px] w-[68%]">
                     powerful protection keeping the condition of your vehicle's
-                    painted surfaces
+                    painted surfaces pristine
                   </p>
                 </div>
               </a>
               <a
                 href="/services#window"
-                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+                className="group cursor-pointer relative h-[372px] w-[293px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/window-tinting.png')",
                   backgroundSize: "cover",
@@ -82,19 +48,19 @@ const HomeBigSection = () => {
               >
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
-                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px] group-hover:text-accent">
+                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-69px] left-1/2 transform -translate-x-1/2">
+                  <p className="font-bold uppercase text-[20px] group-hover:text-accent">
                     Window tinting
                   </p>
-                  <p className="font-normal text-[16px] w-[68%]">
-                    enhance privacy, UV protection and a sleek, custom look of
+                  <p className="font-normal text-[14px] w-[68%]">
+                    enhance privacy, UV protection and the sleek, custom look of
                     your vehicle
                   </p>
                 </div>
               </a>
               <a
                 href="/services#wrapping"
-                className="group cursor-pointer relative h-[456px] w-[358px] rounded-[12px] group"
+                className="group cursor-pointer relative h-[372px] w-[293px] rounded-[12px] group"
                 style={{
                   backgroundImage: "url('/detailing.png')",
                   backgroundSize: "cover",
@@ -103,13 +69,33 @@ const HomeBigSection = () => {
               >
                 <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
 
-                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-74px] left-1/2 transform -translate-x-1/2">
-                  <p className="font-bold uppercase text-[24px] group-hover:text-accent ">
+                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-69px] left-1/2 transform -translate-x-1/2">
+                  <p className="font-bold uppercase text-[20px] group-hover:text-accent ">
                     Wrapping
                   </p>
-                  <p className="font-normal text-[16px] w-[68%]">
+                  <p className="font-normal text-[14px] w-[68%]">
                     customize your vehilce's appearance and protect the original
                     paint
+                  </p>
+                </div>
+              </a>
+              <a
+                href="/services#detailing"
+                className="group cursor-pointer relative h-[372px] w-[293px] rounded-[12px] group"
+                style={{
+                  backgroundImage: "url('/detailing-desktop.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute w-full h-full  group-hover:opacity-60 transition-opacity ease-in-out duration-300 inset-0 bg-black opacity-0"></div>
+
+                <div className="transition-all ease-out duration-300 absolute group-hover:bottom-0 top-auto group-hover:top-1/2 group-hover:translate-y-[-50%] translate-y-0 w-full flex text-center flex-col text-secondary items-center justify-center gap-[16px] bottom-[-69px] left-1/2 transform -translate-x-1/2">
+                  <p className="font-bold uppercase text-[20px] group-hover:text-accent ">
+                    Detailing
+                  </p>
+                  <p className="font-normal text-[14px] w-[68%]">
+                    enjoy a pristine finish and enhanced protection with our top-tier detailing
                   </p>
                 </div>
               </a>
