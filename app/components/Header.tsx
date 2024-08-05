@@ -28,33 +28,33 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
-      <div className="w-full relative z-20 bg-secondary shadow-xl">
+      <div className="w-full relative z-20 bg-primary shadow-xl">
         <div className="relative flex justify-between items-start gap-2 container mx-auto px-5 py-5  transition-all duration-300 ease-in-out ">
           <div className="absolute lg:hidden block left-0 top-1/2 transform -translate-y-1/2">
             <Hamburger toggled={isOpen} toggle={setIsOpen} />
           </div>
           <div className="lg:flex hidden gap-3 items-center">
-            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-primary text-primary rounded-full border-2">
+            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-secondary text-primary rounded-full border-2">
               <Image
-                src="/icons/instagram.svg"
+                src="/icons/instagram-white.svg"
                 width={15}
                 height={15}
                 alt="instagram"
                 className="group-hover:fill-accent"
               />
             </div>
-            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex fill-accent items-center justify-center w-7 h-7 border-primary text-primary rounded-full border-2">
+            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex fill-accent items-center justify-center w-7 h-7 border-secondary text-primary rounded-full border-2">
               <Image
-                src="/icons/facebook.svg"
+                src="/icons/facebook-white.svg"
                 width={9}
                 height={9}
                 alt="facebook"
                 className="group-hover:fill-accent"
               />
             </div>
-            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-primary text-primary rounded-full border-2">
+            <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-secondary text-primary rounded-full border-2">
               <Image
-                src="/icons/youtube.svg"
+                src="/icons/youtube-white.svg"
                 width={15}
                 height={15}
                 alt="youtube"
@@ -62,7 +62,8 @@ const Header = () => {
               />
             </div>
           </div>
-          <Link href="/"
+          <Link
+            href="/"
             className={`mx-auto transition-all duration-300 ease-out ${
               isScrolled
                 ? "w-[85px] h-[47px]"
@@ -76,14 +77,19 @@ const Header = () => {
               alt="logo"
             />
           </Link>
-          <a href="tel:+17732093754" className="group lg:flex hidden items-center gap-4">
+          <a
+            href="tel:+12242011114"
+            className="group lg:flex hidden items-center gap-4"
+          >
             <Image src="/icons/phone.svg" width={19} height={18} alt="phone" />
-            <p className="group-hover:underline underline-offset-4 text-primary text-lg">(773) 209 3754</p>
+            <p className="group-hover:underline underline-offset-4 text-secondary text-lg">
+              +1 (224) 201-1114
+            </p>
           </a>
         </div>
       </div>
       <div
-        className={` items-center justify-center gap-16 bg-primary pt-5 pb-4 transition-opacity duration-300 ${
+        className={` items-center justify-center gap-16 bg-[#161616] pt-5 pb-4 transition-opacity duration-300 ${
           isScrolled ? "hidden" : "lg:flex hidden"
         }`}
       >
@@ -101,9 +107,7 @@ const Header = () => {
         </Link>
         <Link href="/gallery">
           <p
-            className={`nav-link ${
-              router === "/gallery" ? "active-nav" : ""
-            }`}
+            className={`nav-link ${router === "/gallery" ? "active-nav" : ""}`}
           >
             Gallery
           </p>

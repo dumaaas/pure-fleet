@@ -180,8 +180,8 @@ const ContactForm: React.FC = () => {
                     <p className="text-secondary text-[20px]">
                       address:{" "}
                       <span className="text-accent">
-                        Yyshjy street 81A, <br />
-                        Chicago Illanois
+                        7808 Frontage Rd <br />
+                        Skokie, IL 60077, Chicago Illanois
                       </span>
                     </p>
                   </div>
@@ -194,12 +194,12 @@ const ContactForm: React.FC = () => {
                       alt="location"
                     />
                     <a
-                      href="tel:+17732093754"
+                      href="tel:+12242011114"
                       className="group text-secondary text-[20px]"
                     >
                       phone:{" "}
                       <span className="group-hover:underline underline-offset-4 text-accent">
-                        (773) 209 3754
+                        +1 (224) 201-1114
                       </span>
                     </a>
                   </div>
