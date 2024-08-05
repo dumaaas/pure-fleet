@@ -31,7 +31,7 @@ const Header = () => {
       <div className="w-full relative z-20 bg-primary shadow-xl">
         <div className="relative flex justify-between items-start gap-2 container mx-auto px-5 py-5  transition-all duration-300 ease-in-out ">
           <div className="absolute lg:hidden block left-0 top-1/2 transform -translate-y-1/2">
-            <Hamburger toggled={isOpen} toggle={setIsOpen} />
+            <Hamburger color="white" toggled={isOpen} toggle={setIsOpen} />
           </div>
           <div className="lg:flex hidden gap-3 items-center">
             <div className="cursor-pointer group hover:border-accent duration-200 ease-in-out transition-all flex items-center justify-center w-7 h-7 border-secondary text-primary rounded-full border-2">
